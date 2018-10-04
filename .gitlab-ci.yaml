@@ -9,4 +9,5 @@ test_job:
   - ls -a
   - cd client
   - npm install
-  - npm test   
+  - npm test
+  
