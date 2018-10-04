@@ -1,0 +1,12 @@
+image: node
+
+stages:
+- test
+
+test_job:
+  stage: test
+  script:
+  - ls -a
+  - cd client
+  - npm install
+  - npm test   
