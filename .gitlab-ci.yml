@@ -9,6 +9,6 @@ test_job:
   - ls -a
   - cd client
   - sh install-chrome.sh
-  - npm install
-  - npm test
+  - yarn install
+  - yarn test
   
