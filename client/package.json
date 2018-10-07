@@ -7,7 +7,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "test:karma-headless": "node_modules/.bin/karma start ./config/karma-headless.conf.js"
   },
   "private": true,
   "dependencies": {
