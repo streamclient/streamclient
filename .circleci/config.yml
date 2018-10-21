@@ -7,7 +7,9 @@ jobs:
     steps:
       - checkout
       - run: pwd 
+      - run: ls -a 
       - run: cd client
+      - run: ls -a 
       - run: yarn
       - run: yarn run format:enforce
       - run: yarn run build
