@@ -24,8 +24,6 @@ pages:
 test:client:
    image: angular/ngcontainer
    script:
-     - pwd
      - cd client
-     - time yarn install 
-     - time yarn generate 
+     - yarn install 
      - xvfb-run -a yarn test
