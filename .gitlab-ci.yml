@@ -24,6 +24,6 @@ pages:
 test:client:
    image: angular/ngcontainer
    script:
-     - xvfb-run -a cd client
-     - xvfb-run -a yarn install 
+     - cd client
+     - yarn install 
      - xvfb-run -a yarn test
