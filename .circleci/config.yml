@@ -6,9 +6,7 @@ jobs:
       - image: angular/ngcontainer:0.2.0
     steps:
       - checkout
-      - run: pwd 
-      - run: cd client
       - run: yarn
-      - run: ls -a && yarn run format:enforce
-      - run: yarn run build
-      - run: xvfb-run -a yarn test
+      - run: ls -a && cd /home/circleci/ng/client && yarn run format:enforce
+      - run: cd /home/circleci/ng/client && yarn run build
+      - run: cd /home/circleci/ng/client && xvfb-run -a yarn test
