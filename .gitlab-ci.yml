@@ -1,10 +1,7 @@
-image: node
-
-cache:
-  paths:
-    - client/node_modules/
-
 pages:
+  image: node
+  before_script:
+    - pwd
   script:
     - cd client
     - npm --version
@@ -14,8 +11,21 @@ pages:
     - time yarn run generate
     - date
     - du -sh public/
+    - mv public ../public
     - ls -a
-
+    - pwd
+    - cd ..
+    - ls -a
+    - pwd
   artifacts:
     paths:
-      - client/public
+      - public
+
+test:client:
+   image: angular/ngcontainer
+   script:
+     - pwd
+     - cd client
+     - time yarn install 
+     - time yarn generate 
+     - xvfb-run -a yarn test
