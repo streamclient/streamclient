@@ -7,6 +7,6 @@ jobs:
     steps:
       - checkout
       - run: yarn
-      - run: ls -a && cd /home/circleci/ng/client && yarn run 
+      - run: ls -a && cd /home/circleci/ng/client && yarn install 
       - run: cd /home/circleci/ng/client && yarn run build
       - run: cd /home/circleci/ng/client && xvfb-run -a yarn test
