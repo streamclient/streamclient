@@ -22,7 +22,7 @@ pages:
       - public
 
 test:client:
-   image: angular/ngcontainer
+   image: angular/ngcontainer:0.2.0
    script:
      - cd client
      - yarn install 
