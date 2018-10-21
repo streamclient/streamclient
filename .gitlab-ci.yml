@@ -9,9 +9,9 @@ pages:
     - cd client
     - npm --version
     - date
-    - yarn install
+    - time yarn install
     - date
-    - yarn run generate
+    - time yarn run generate
     - date
     - du -sh public/
     - ls -a
